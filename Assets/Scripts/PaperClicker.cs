@@ -17,7 +17,6 @@ public class PaperClicker : MonoBehaviour
         state = State.Find();
         cam = Camera.main;
         layerMask = 1 << LayerMask.NameToLayer("Clickable");
-        canInteract = true;
         coffee.OnFinishDrinking += OnDrink;
     }
 
@@ -29,18 +28,14 @@ public class PaperClicker : MonoBehaviour
     private void OnCoffeeClick()
     {
         coffee.Drink();
-        canInteract = false;
     }
 
     private void OnDrink()
     {
-        canInteract = true;
     }
 
     private void HandleClick()
     {
-        if (!canInteract) return;
-        
         if (Input.GetButtonDown("Fire1"))
         {
             var ray = cam.ScreenPointToRay(Input.mousePosition);

@@ -18,7 +18,7 @@ public class SleepEffect : MonoBehaviour
     {
         if (state.energyLevel <= 0)
         {
-            vignette.intensity.value = Mathf.Clamp01(-state.energyLevel);
+            vignette.intensity.value = -state.energyLevel * 1.5f;
         }
     }
 }

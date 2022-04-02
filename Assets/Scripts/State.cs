@@ -5,17 +5,12 @@ public class State : MonoBehaviour
 {
     public float typingSpeed;
     public float coffeePower;
-    public float tirednessPower;
+    public float workCost;
     public float energyLevel;
 
     public static State Find()
     {
         var go = GameObject.FindWithTag("Logic");
         return go.GetComponent<State>();
-    }
-
-    private void Update()
-    {
-        energyLevel -= tirednessPower * Time.deltaTime;
     }
 }

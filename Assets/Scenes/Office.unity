@@ -3487,7 +3487,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   typingSpeed: 0.05
   coffeePower: 0.5
-  tirednessPower: 0.05
+  workCost: 0.15
   energyLevel: 0
 --- !u!114 &557959701
 MonoBehaviour:
@@ -12736,6 +12736,10 @@ PrefabInstance:
       propertyPath: state
       value: 
       objectReference: {fileID: 557959700}
+    - target: {fileID: 5610801597558031593, guid: fccde946fbeca4f5b8d511e0dcda3dc2, type: 3}
+      propertyPath: charsPerUpdate
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 5610801597558031604, guid: fccde946fbeca4f5b8d511e0dcda3dc2, type: 3}
       propertyPath: m_Name
       value: Paper

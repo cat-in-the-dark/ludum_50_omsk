@@ -19,7 +19,7 @@ public class CoffeeEffect : MonoBehaviour
     {
         if (state.energyLevel > 0)
         {
-            chromatic.intensity.value = state.energyLevel;
+            chromatic.intensity.value = state.energyLevel * 1.5f;
         }
     }
 }
