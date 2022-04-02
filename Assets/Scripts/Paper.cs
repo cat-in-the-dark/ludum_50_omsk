@@ -10,11 +10,13 @@ public class Paper : MonoBehaviour
     
     [SerializeField] private TMP_Text uiText;
     [SerializeField] private int charsPerUpdate;
-    private readonly int maxChars = 4000;
-    private float CurrentProgress => Mathf.Clamp01((float) pos / maxChars);
+    private readonly int maxChars = 3500;
+    public float CurrentProgress => Mathf.Clamp01((float) currentPos / maxChars);
 
     private int pos = 0;
     private int currentPos = 0;
+
+    private bool isTyping;
     
     private State state;
 
@@ -23,6 +25,7 @@ public class Paper : MonoBehaviour
         state = State.Find();
         pos = 0;
         currentPos = 0;
+        isTyping = false;
     }
 
     private void Update()
@@ -32,6 +35,12 @@ public class Paper : MonoBehaviour
             uiText.text = Text;
             currentPos += charsPerUpdate;
         }
+        else
+        {
+            isTyping = false;
+        }
+        
+        Debug.Log(CurrentProgress);
     }
 
 
@@ -39,7 +48,9 @@ public class Paper : MonoBehaviour
     {
         if (state.energyLevel <= state.minEnergyLevel) return;
         if (!state.isLampEnabled) return;
-        
+        if (isTyping) return;
+
+        isTyping = true;
         var step = Mathf.CeilToInt(state.typingSpeed * maxChars);
         pos += step;
         state.energyLevel -= state.workCost;
