@@ -39,8 +39,6 @@ public class Paper : MonoBehaviour
         {
             isTyping = false;
         }
-        
-        Debug.Log(CurrentProgress);
     }
 
 
