@@ -7,7 +7,8 @@ public class PaperClicker : MonoBehaviour
     
     [SerializeField] private Paper paper;
     [SerializeField] private Coffee coffee;
-
+    [SerializeField] private LampControl lamp;
+    
     private State state;
 
     private bool canInteract;
@@ -17,7 +18,6 @@ public class PaperClicker : MonoBehaviour
         state = State.Find();
         cam = Camera.main;
         layerMask = 1 << LayerMask.NameToLayer("Clickable");
-        coffee.OnFinishDrinking += OnDrink;
     }
 
     private void OnPaperClick()
@@ -30,8 +30,9 @@ public class PaperClicker : MonoBehaviour
         coffee.Drink();
     }
 
-    private void OnDrink()
+    private void OnLampClick()
     {
+        lamp.TurnOn();
     }
 
     private void HandleClick()
@@ -50,6 +51,11 @@ public class PaperClicker : MonoBehaviour
                 {
                     OnCoffeeClick();
                 }
+                
+                if (hit.collider.CompareTag("Lamp"))
+                {
+                    OnLampClick();
+                }
             }
         }
     }
@@ -57,7 +63,5 @@ public class PaperClicker : MonoBehaviour
     private void Update()
     {
         HandleClick();
-
-        
     }
 }

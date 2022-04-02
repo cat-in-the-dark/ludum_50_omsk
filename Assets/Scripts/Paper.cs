@@ -37,7 +37,9 @@ public class Paper : MonoBehaviour
 
     public void AppendText()
     {
-        if (state.energyLevel <= -1) return;
+        if (state.energyLevel <= state.minEnergyLevel) return;
+        if (!state.isLampEnabled) return;
+        
         var step = Mathf.CeilToInt(state.typingSpeed * maxChars);
         pos += step;
         state.energyLevel -= state.workCost;

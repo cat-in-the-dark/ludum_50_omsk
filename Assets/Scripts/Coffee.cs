@@ -18,7 +18,10 @@ public class Coffee : MonoBehaviour
 
     public void Drink()
     {
-        StartCoroutine(StartDrink());
+        if (state.energyLevel <= state.maxEnergyLevel)
+        {
+            StartCoroutine(StartDrink());
+        }
     }
 
     private IEnumerator StartDrink()
