@@ -17,6 +17,7 @@ public class LampControl : MonoBehaviour
 
     public void TurnOn()
     {
+        state.inHand = State.HandObjects.LAMP;
         timeAliveSec = 0;
     }
 

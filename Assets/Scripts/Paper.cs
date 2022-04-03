@@ -13,8 +13,8 @@ public class Paper : MonoBehaviour
     private readonly int maxChars = 3500;
     public float CurrentProgress => Mathf.Clamp01((float) currentPos / maxChars);
 
-    private int pos = 0;
-    private int currentPos = 0;
+    private int pos;
+    private int currentPos;
 
     private bool isTyping;
     
@@ -47,6 +47,7 @@ public class Paper : MonoBehaviour
         if (state.energyLevel <= state.minEnergyLevel) return;
         if (!state.isLampEnabled) return;
         if (isTyping) return;
+        if (state.inHand != State.HandObjects.PENCIL) return;
 
         isTyping = true;
         var step = Mathf.CeilToInt(state.typingSpeed * maxChars);

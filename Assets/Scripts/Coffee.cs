@@ -26,6 +26,7 @@ public class Coffee : MonoBehaviour
 
     private void StartDrink()
     {
+        state.inHand = State.HandObjects.CUP;
         isDrinking = true;
         
         var initPos = transform.position;

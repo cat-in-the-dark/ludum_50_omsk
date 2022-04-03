@@ -2,6 +2,16 @@ using UnityEngine;
 
 public class State : MonoBehaviour
 {
+    public enum HandObjects
+    {
+        PENCIL,
+        CUP,
+        PHONE,
+        LAMP,
+        NONE
+    }
+    
+    
     public float typingSpeed;
     public float coffeePower;
     public float workCost;
@@ -13,6 +23,8 @@ public class State : MonoBehaviour
 
     public float minMouseSens;
     public float maxMouseSens;
+
+    public HandObjects inHand;
     
     public float LookSensitivity => Mathf.Lerp(minMouseSens,maxMouseSens,Mathf.InverseLerp(minEnergyLevel, maxEnergyLevel, energyLevel));
 

@@ -9,6 +9,7 @@ public class PaperClicker : MonoBehaviour
     [SerializeField] private Coffee coffee;
     [SerializeField] private LampControl lamp;
     [SerializeField] private Phone phone;
+    [SerializeField] private Pencil pencil;
     
     private State state;
 
@@ -21,21 +22,6 @@ public class PaperClicker : MonoBehaviour
         layerMask = 1 << LayerMask.NameToLayer("Clickable");
     }
 
-    private void OnPaperClick()
-    {
-        paper.AppendText();
-    }
-
-    private void OnCoffeeClick()
-    {
-        coffee.Drink();
-    }
-
-    private void OnLampClick()
-    {
-        lamp.TurnOn();
-    }
-
     private void HandleClick()
     {
         if (Input.GetButtonDown("Fire1"))
@@ -45,22 +31,27 @@ public class PaperClicker : MonoBehaviour
             {
                 if (hit.collider.CompareTag("Paper"))
                 {
-                    OnPaperClick();
+                    paper.AppendText();
                 }
                 
                 if (hit.collider.CompareTag("Coffee"))
                 {
-                    OnCoffeeClick();
+                    coffee.Drink();
                 }
                 
                 if (hit.collider.CompareTag("Lamp"))
                 {
-                    OnLampClick();
+                    lamp.TurnOn();
                 }
                 
                 if (hit.collider.CompareTag("Phone"))
                 {
                     phone.TouchPhone();
+                }
+                
+                if (hit.collider.CompareTag("Pencil"))
+                {
+                    pencil.ActWith();
                 }
             }
         }

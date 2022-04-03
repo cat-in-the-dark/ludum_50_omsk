@@ -9,6 +9,7 @@ TagManager:
   - Logic
   - Lamp
   - Phone
+  - Pencil
   layers:
   - Default
   - TransparentFX
@@ -17,7 +18,7 @@ TagManager:
   - Water
   - UI
   - Clickable
-  - 
+  - Table
   - 
   - 
   - 

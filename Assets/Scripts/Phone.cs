@@ -10,16 +10,21 @@ public class Phone : MonoBehaviour
     [SerializeField] private Material videoMaterial;
     [SerializeField] private MeshRenderer mr;
     [SerializeField] private float turnOffAfter;
+
+    private State state;
     
     // Start is called before the first frame update
     void Start()
     {
         player = GetComponent<VideoPlayer>();
         mr.material = blackMaterial;
+        state = State.Find();
     }
 
     public void TouchPhone()
     {
+        if (player.isPlaying) return;
+        state.inHand = State.HandObjects.PHONE;
         player.Play();
         mr.material = videoMaterial;
         StartCoroutine(StopPlayer());
