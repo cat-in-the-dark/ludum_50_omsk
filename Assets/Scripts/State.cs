@@ -39,7 +39,7 @@ public class State : MonoBehaviour
             float mul = 1;
             if (videoIsOn)
             {
-                mul *= 2.0f;
+                mul *= 1.5f;
             }
             
             if (energyLevel > 0)

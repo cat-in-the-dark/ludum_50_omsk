@@ -19,9 +19,12 @@ public class Coffee : MonoBehaviour
 
     public void Drink()
     {
-        if (state.energyLevel < state.maxEnergyLevel && !isDrinking)
+        if (state.energyLevel < state.maxEnergyLevel)
         {
-            StartDrink();
+            if (!isDrinking)
+            {
+                StartDrink();
+            }
         }
         else
         {
