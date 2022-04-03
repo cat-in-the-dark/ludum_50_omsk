@@ -3992,8 +3992,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentProgress: 0
   baseTypingSpeed: 0.1
-  coffeePower: 0.5
-  workCost: 0.15
+  coffeePower: 0.6
+  workCost: 0.2
   energyLevel: 0
   isLampEnabled: 1
   videoIsOn: 0
@@ -4001,8 +4001,8 @@ MonoBehaviour:
   maxEnergyLevel: 1.3
   minMouseSens: 0.2
   maxMouseSens: 14
-  turnVideoOffAfter: 20
-  disableLightAfter: 7
+  turnVideoOffAfter: 16
+  disableLightAfter: 9
   inHand: 4
 --- !u!114 &557959701
 MonoBehaviour:
@@ -14209,7 +14209,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 9d6a485990e1644c3aba2fb38f9b1c49, type: 2}
     - target: {fileID: 1118611355, guid: 5c16e7def3ec24a1095ca5b79a6b5fc3, type: 3}
       propertyPath: m_DirectAudioVolumes.Array.data[0]
-      value: 0.5
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 4058809313750614355, guid: 5c16e7def3ec24a1095ca5b79a6b5fc3, type: 3}
       propertyPath: m_Name

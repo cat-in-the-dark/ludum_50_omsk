@@ -393,7 +393,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "TbI  \u041FPOIIIE\u041B \u0418\u0413PY\n\nHA}I{M\u0418 \u041FPObE\u041B"
+  m_text: "T\u042B  \u041FPO\u0428E\u041B \u0418\u0413P\u0423\n\nHA\u0416M\u0418
+    \u041B\u042E\u0411\u0423\u042E \u041A\u041D\u041E\u041F\u041A\u0423"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 99d7c2b558ce4479c8a5e0fd89a69bce, type: 2}
   m_sharedMaterial: {fileID: 8139692846632195634, guid: 99d7c2b558ce4479c8a5e0fd89a69bce, type: 2}
