@@ -10,14 +10,12 @@ public class PaperClicker : MonoBehaviour
     [SerializeField] private LampControl lamp;
     [SerializeField] private Phone phone;
     [SerializeField] private Pencil pencil;
-    
-    private State state;
+    [SerializeField] private Rotator logo;
 
     private bool canInteract;
 
     private void Start()
     {
-        state = State.Find();
         cam = Camera.main;
         layerMask = 1 << LayerMask.NameToLayer("Clickable");
     }
@@ -52,6 +50,11 @@ public class PaperClicker : MonoBehaviour
                 if (hit.collider.CompareTag("Pencil"))
                 {
                     pencil.ActWith();
+                }
+
+                if (hit.collider.CompareTag("Logo"))
+                {
+                    logo.ActWith();
                 }
             }
         }

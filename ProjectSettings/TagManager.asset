@@ -10,6 +10,7 @@ TagManager:
   - Lamp
   - Phone
   - Pencil
+  - Logo
   layers:
   - Default
   - TransparentFX

@@ -1,3 +1,4 @@
+using DG.Tweening;
 using UnityEngine;
 
 public class Rotator : MonoBehaviour
@@ -8,5 +9,13 @@ public class Rotator : MonoBehaviour
     void Update()
     {
         transform.Rotate(rotationSpeed * Time.deltaTime);
+    }
+
+    public void ActWith()
+    {
+        var initScale = transform.localScale;
+        var seq = DOTween.Sequence();
+        seq.Append(transform.DOScale( initScale * 2f, 2f).SetEase(Ease.OutElastic));
+        seq.Append(transform.DOScale(initScale, 2f).SetEase(Ease.OutBack));
     }
 }
