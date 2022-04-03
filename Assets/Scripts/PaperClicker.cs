@@ -8,6 +8,7 @@ public class PaperClicker : MonoBehaviour
     [SerializeField] private Paper paper;
     [SerializeField] private Coffee coffee;
     [SerializeField] private LampControl lamp;
+    [SerializeField] private Phone phone;
     
     private State state;
 
@@ -55,6 +56,11 @@ public class PaperClicker : MonoBehaviour
                 if (hit.collider.CompareTag("Lamp"))
                 {
                     OnLampClick();
+                }
+                
+                if (hit.collider.CompareTag("Phone"))
+                {
+                    phone.TouchPhone();
                 }
             }
         }
