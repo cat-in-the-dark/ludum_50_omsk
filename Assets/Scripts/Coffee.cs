@@ -8,6 +8,7 @@ public class Coffee : MonoBehaviour
     [SerializeField] private Transform faceAnchor;
     public event Action OnFinishDrinking;
     private bool isDrinking;
+    [SerializeField] private AudioSource yamete;
 
     private State state;
 
@@ -21,6 +22,10 @@ public class Coffee : MonoBehaviour
         if (state.energyLevel < state.maxEnergyLevel && !isDrinking)
         {
             StartDrink();
+        }
+        else
+        {
+            yamete.Play();
         }
     }
 

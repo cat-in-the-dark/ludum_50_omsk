@@ -10,6 +10,7 @@ public class Paper : MonoBehaviour
     [SerializeField] private TMP_Text uiText;
     [SerializeField] private float charsPerUpdate;
     [SerializeField] private int maxChars = 3500;
+    [SerializeField] private AudioSource nani;
     public float CurrentProgress => Mathf.Clamp01((float) currentPos / maxChars);
 
     private int pos;
@@ -43,9 +44,17 @@ public class Paper : MonoBehaviour
     public void AppendText()
     {
         if (state.energyLevel <= state.minEnergyLevel) return;
-        if (!state.isLampEnabled) return;
+        if (!state.isLampEnabled)
+        {
+            nani.Play();
+            return;
+        }
         if (isTyping) return;
-        if (state.inHand != State.HandObjects.PENCIL) return;
+        if (state.inHand != State.HandObjects.PENCIL)
+        {
+            nani.Play();
+            return;
+        }
         if (state.currentProgress >= 1) return;
 
         Debug.Log(state.typingSpeed * maxChars);
