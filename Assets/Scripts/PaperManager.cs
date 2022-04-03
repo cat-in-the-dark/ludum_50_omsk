@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using DG.Tweening;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PaperManager : MonoBehaviour
 {
@@ -9,6 +10,7 @@ public class PaperManager : MonoBehaviour
     [SerializeField] private int currentPaperIdx;
     private State state;
     [SerializeField] private Transform target;
+    [SerializeField] private AudioSource wowAudio;
 
     private void Start()
     {
@@ -66,10 +68,17 @@ public class PaperManager : MonoBehaviour
         paper.enabled = false;
         paper.transform.DOMove(anchor.position, 1f).SetEase(Ease.InQuart);
         paper.transform.DORotate(anchor.rotation.eulerAngles, 0.2f);
+        
+        wowAudio.Play();
     }
 
     private void GameEnd()
     {
-        Debug.Log("GameOver");
+        Invoke("LoadGameOver", 2f);
+    }
+
+    private void LoadGameOver()
+    {
+        SceneManager.LoadScene(1);
     }
 }

@@ -484,5 +484,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   uiText: {fileID: 5610801596126325667}
-  charsPerUpdate: 0.1
+  charsPerUpdate: 0.05
   maxChars: 4000

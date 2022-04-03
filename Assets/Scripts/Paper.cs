@@ -32,7 +32,7 @@ public class Paper : MonoBehaviour
         if (currentPos < pos)
         {
             uiText.text = Text;
-            currentPos += Mathf.CeilToInt(state.typingSpeed * maxChars * charsPerUpdate);
+            currentPos += Mathf.CeilToInt(maxChars * charsPerUpdate);
         }
         else
         {
@@ -48,6 +48,8 @@ public class Paper : MonoBehaviour
         if (state.inHand != State.HandObjects.PENCIL) return;
         if (state.currentProgress >= 1) return;
 
+        Debug.Log(state.typingSpeed * maxChars);
+        
         isTyping = true;
         var step = Mathf.CeilToInt(state.typingSpeed * maxChars);
         pos += step;

@@ -18,7 +18,7 @@ public class Coffee : MonoBehaviour
 
     public void Drink()
     {
-        if (state.energyLevel <= state.maxEnergyLevel && !isDrinking)
+        if (state.energyLevel < state.maxEnergyLevel && !isDrinking)
         {
             StartDrink();
         }
@@ -54,7 +54,7 @@ public class Coffee : MonoBehaviour
         float delta = state.coffeePower * 0.01f;
         while (applied < state.coffeePower)
         {
-            state.energyLevel += delta;
+            state.energyLevel = Mathf.Clamp(state.energyLevel + delta, state.minEnergyLevel, state.maxEnergyLevel);
             applied += delta; 
             yield return new WaitForFixedUpdate();
         }

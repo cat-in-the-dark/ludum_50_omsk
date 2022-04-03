@@ -9,7 +9,6 @@ public class Phone : MonoBehaviour
     [SerializeField] private Material blackMaterial;
     [SerializeField] private Material videoMaterial;
     [SerializeField] private MeshRenderer mr;
-    [SerializeField] private float turnOffAfter;
 
     private State state;
     
@@ -27,13 +26,15 @@ public class Phone : MonoBehaviour
         state.inHand = State.HandObjects.PHONE;
         player.Play();
         mr.material = videoMaterial;
+        state.videoIsOn = true;
         StartCoroutine(StopPlayer());
     }
 
     private IEnumerator StopPlayer()
     {
-        yield return new WaitForSeconds(turnOffAfter);
+        yield return new WaitForSeconds(state.turnVideoOffAfter);
         player.Pause();
         mr.material = blackMaterial;
+        state.videoIsOn = false;
     }
 }

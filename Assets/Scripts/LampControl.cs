@@ -3,7 +3,6 @@ using UnityEngine;
 public class LampControl : MonoBehaviour
 {
     [SerializeField] private GameObject lightObj;
-    [SerializeField] private float disableAfterSec;
     [SerializeField] private float timeAliveSec;
 
     private State state;
@@ -23,7 +22,7 @@ public class LampControl : MonoBehaviour
 
     private void Update()
     {
-        if (timeAliveSec >= disableAfterSec)
+        if (timeAliveSec >= state.disableLightAfter)
         {
             state.isLampEnabled = false;
             lightObj.SetActive(false);
