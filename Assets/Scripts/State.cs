@@ -10,7 +10,8 @@ public class State : MonoBehaviour
         LAMP,
         NONE
     }
-    
+
+    public float currentProgress;
     
     public float typingSpeed;
     public float coffeePower;

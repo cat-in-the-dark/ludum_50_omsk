@@ -113,7 +113,7 @@ Transform:
   m_GameObject: {fileID: 4058809313750614355}
   m_LocalRotation: {x: 0, y: 0.2860228, z: 0, w: 0.9582228}
   m_LocalPosition: {x: 18.825, y: 0.821, z: 3.888}
-  m_LocalScale: {x: 0.071, y: 0.0077, z: 0.143}
+  m_LocalScale: {x: 0.071, y: 0.0077, z: 0.16}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4058809313016354736}
@@ -198,7 +198,7 @@ MonoBehaviour:
   blackMaterial: {fileID: 2100000, guid: 486f5bb58e49644d19f64269492b8a2b, type: 2}
   videoMaterial: {fileID: 2100000, guid: acf240ef7518f4dc3a7c1244713335c1, type: 2}
   mr: {fileID: 4058809313016354766}
-  turnOffAfter: 60
+  turnOffAfter: 12
 --- !u!328 &1118611355
 VideoPlayer:
   m_ObjectHideFlags: 0
@@ -216,7 +216,7 @@ VideoPlayer:
   m_TargetMaterialRenderer: {fileID: 0}
   m_TargetMaterialProperty: <noninit>
   m_RenderMode: 2
-  m_AspectRatio: 0
+  m_AspectRatio: 2
   m_DataSource: 0
   m_PlaybackSpeed: 1
   m_AudioOutputMode: 2
@@ -226,7 +226,7 @@ VideoPlayer:
   - 1
   m_Url: 
   m_EnabledAudioTracks: 01
-  m_DirectAudioMutes: 01
+  m_DirectAudioMutes: 00
   m_ControlledAudioTrackCount: 1
   m_PlayOnAwake: 0
   m_SkipOnDrop: 1

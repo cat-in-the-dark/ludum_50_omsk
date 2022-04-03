@@ -4,8 +4,8 @@ public class PaperClicker : MonoBehaviour
 {
     private Camera cam;
     private int layerMask;
-    
-    [SerializeField] private Paper paper;
+
+    [SerializeField] private PaperManager paperManager;
     [SerializeField] private Coffee coffee;
     [SerializeField] private LampControl lamp;
     [SerializeField] private Phone phone;
@@ -31,7 +31,7 @@ public class PaperClicker : MonoBehaviour
             {
                 if (hit.collider.CompareTag("Paper"))
                 {
-                    paper.AppendText();
+                    paperManager.AppendText();
                 }
                 
                 if (hit.collider.CompareTag("Coffee"))

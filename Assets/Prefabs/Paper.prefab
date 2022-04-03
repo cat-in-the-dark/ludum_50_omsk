@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 143787173}
   - component: {fileID: 143787175}
   - component: {fileID: 143787174}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Title
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -146,7 +146,7 @@ GameObject:
   - component: {fileID: 5610801596126325666}
   - component: {fileID: 5610801596126325668}
   - component: {fileID: 5610801596126325667}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -201,7 +201,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\u0442\u0435\u0442\u0441"
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 99d7c2b558ce4479c8a5e0fd89a69bce, type: 2}
   m_sharedMaterial: {fileID: 8139692846632195634, guid: 99d7c2b558ce4479c8a5e0fd89a69bce, type: 2}
@@ -228,8 +228,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 0.02
-  m_fontSizeBase: 0.02
+  m_fontSize: 0.015
+  m_fontSizeBase: 0.015
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -282,7 +282,7 @@ GameObject:
   - component: {fileID: 5610801597481792469}
   - component: {fileID: 5610801597481792468}
   - component: {fileID: 5610801597481792467}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: PaperCanvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -385,7 +385,7 @@ GameObject:
   - component: {fileID: 5610801597558031606}
   - component: {fileID: 5610801597558031605}
   - component: {fileID: 5610801597558031593}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: Paper
   m_TagString: Paper
   m_Icon: {fileID: 0}
@@ -400,7 +400,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5610801597558031604}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 18.492, y: 0.838, z: 4.042}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.3, y: 0.01, z: 0.4}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -478,10 +478,11 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5610801597558031604}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5b2cbb46291a4c45b3aee39bbf9e8c99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   uiText: {fileID: 5610801596126325667}
-  charsPerUpdate: 7
+  charsPerUpdate: 0.1
+  maxChars: 4000
